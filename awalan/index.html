@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Vue</title>
+</head>
+<body>
+    <h2>Belajar Vue</h2>
+    <input type="text" id="input">
+    <div id='textValue'>Value dari input text adalah: Hello World</div>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+    document.getElementById("input").value = "Hello World";
+	window.onkeyup = keyup;
+    var inputTextValue;
+	function keyup(e) {
+        inputTextValue = e.target.value;
+        jQuery('#textValue').text("Value dari input text adalah: " + inputTextValue);
+    }
+    </script>
+</body>
+</html>
