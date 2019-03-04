@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Event Handling</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div id="app">
+		<button type="button" v-on:click="show_message">Klik</button>
+	</div>
+
+	<script src="../js/vue.js"></script>
+	<script>
+		new Vue({
+			el:"#app",
+			data: {
+				pesan: "Hai Jomblo"
+			},
+			methods: {
+				show_message: function() {
+					alert(this.pesan)
+				}
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter Apps</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div id="app">
+		{{ judul }} <br> <!-- ambil value 'judul' dari property 'data' -->
+		<aplikasi-penghitung></aplikasi-penghitung>
+		<aplikasi-penghitung></aplikasi-penghitung>
+	</div>
+
+	<script src="../js/vue.js"></script>
+	<script>
+		Vue.component('aplikasi-penghitung', {
+			template: '<button type="button" v-on:click="increment"> {{ num }} </button>',
+			data: function() {
+				return {
+					num: 0
+				}
+			},
+			methods: {
+				increment: function () {
+					this.num++
+				}
+			}
+		})
+
+		new Vue({
+			el: "#app",
+			data: {
+				judul: "Aplikasi penghitung dengan Vue.js"
+			}
+		})
+	</script>
+</body>
+</html>

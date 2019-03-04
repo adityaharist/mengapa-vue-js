@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>List Rendering</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li v-for="biodata in nama_siswa">
+				{{ biodata.nama }}
+			</li>
+		</ul>
+	</div>
+
+	<script src="../js/vue.js"></script>
+	<script>
+		new Vue({
+			el:"#app",
+			data: {
+				nama_siswa: [
+					{nama: "Aditya Harist Ari Firmansyah"},
+					{nama: "Abed Khurin Tasnimul"},
+					{nama: "Savero Muharis"},
+					{nama: "Fadilah Khoirurrosyid"}
+				]
+			}
+		});
+	</script>
+</body>
+</html>

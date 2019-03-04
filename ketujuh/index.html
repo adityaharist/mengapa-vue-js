@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Component Vue</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div id="app">
+		<contoh-komponen></contoh-komponen>
+	</div>
+
+	<script src="../js/vue.js"></script>
+	<script>
+		Vue.component('contoh-komponen', {
+			template: "<p> Hai ini adalah komponen baru</p>"
+		});
+
+		new Vue({
+			el: "#app"
+		});
+	</script>
+</body>
+</html>

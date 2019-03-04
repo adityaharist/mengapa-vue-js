@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Conditional Rendering</title>
+</head>
+<body>
+	<div id="app">
+		<h1 v-if="nilai >= 80 && nilai <= 100">Nilai A Skripsiku wuhu...</h1>
+		<h1 v-else-if="nilai >= 70 && nilai <= 79">Nilai B Skripsiku, sesuai ekspektasi iki...</h1>
+		<h1 v-else>Nilai C Skripsiku...amat disayangkan</h1>
+	</div>
+
+
+	<script src="../js/vue.js"></script>
+	<script>
+		new Vue({
+			el: "#app",
+			data: {
+				nilai: 100
+			}
+		});
+	</script>
+</body>
+</html>
